@@ -33,6 +33,17 @@ if (direction === 'up') {
         }
     }
 
+// Поддержка клавиатуры, кнопки вверх-вних
+document.addEventListener('keydown',
+event=> {
+    // console.log(event.key)
+    if (event.key === 'ArrowUp') {
+changeSlide ('up')
+    } else if (event.key === 'ArrowDown') {
+        changeSlide ('down')
+    }
+})
+
 const height = container.clientHeight;
 
 // // Вычесляем смещение
