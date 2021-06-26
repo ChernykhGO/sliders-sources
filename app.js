@@ -19,6 +19,17 @@ downBtn.addEventListener('click', () => {
     changeSlide('down')
 });
 
+// Поддержка клавиатуры, кнопки вверх-вних
+// document.addEventListener('keydown',
+// event=> {
+//     // console.log(event.key)
+//     if (event.key === 'ArrowUp') {
+// changeSlide ('up')
+//     } else if (event.key === 'ArrowDown') {
+//         changeSlide ('down')
+//     }
+// })
+
 function changeSlide(direction) {
 if (direction === 'up') {
     activeSlideIndex++
@@ -33,16 +44,6 @@ if (direction === 'up') {
         }
     }
 
-// Поддержка клавиатуры, кнопки вверх-вних
-document.addEventListener('keydown',
-event=> {
-    // console.log(event.key)
-    if (event.key === 'ArrowUp') {
-changeSlide ('up')
-    } else if (event.key === 'ArrowDown') {
-        changeSlide ('down')
-    }
-})
 
 const height = container.clientHeight;
 
